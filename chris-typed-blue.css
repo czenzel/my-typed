@@ -1,11 +1,41 @@
-header { border-bottom: 1px dashed Navy; margin-bottom: 30px; padding-bottom: 30px; }
+/*
+ Copyright 2015 Christopher Zenzel. All Rights Reserved.
+ */
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300);
+
+article { font-family: 'Open Sans', sans-serif; font-size: 12pt; }
+
+header { margin-top: 15px; border-bottom: 1px dashed Navy; margin-bottom: 30px; padding-bottom: 30px; }
+
 h1.site-title { text-shadow: 2px 2px rgba(134, 137, 185, 0.6); }
 .site-title a { color: Navy !important; }
+
 .site-nav { background: rgba(176, 187, 239, 0.54); }
 .site-nav > ul { padding: 10px; }
 .site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; }
-.site-tagline { color: Navy; }
+
+.site-tagline { color: Navy; font-style: normal !important; text-shadow: 2px 2px rgba(5, 46, 255, 0.16); }
+
 a.read-more:after { content: " \00BB"; }
+
 .author-bio h3 { text-shadow: 2px 2px rgba(0, 0, 0, 0.37); }
-article img { border-radius: 30px; }
+
+article img { border-radius: 20px; }
+
 article h1, h2, h3, h4 { text-shadow: 2px 2px rgba(0, 0, 0, 0.3); }
+article p { text-align: justify; }
+
+/* Menu Bar Top */
+
+#myMenuBar { font-family: 'Open Sans', sans-serif; color: White; font-size: 11pt; position: absolute; top: 0px; margin: 0; padding: 10px; background: rgba(8, 30, 147, 0.75); width: 100%; height: 45px; }
+
+#myMenuBar .myMenuBarLeft { float: left; }
+#myMenuBar .myMenuBarRight { float: right; }
+#myMenuBar .myMenuBarMobile { display: none; }
+
+@media all and (max-width: 500px) {
+  #myMenuBar .myMenuBarLeft { display: none; }
+  #myMenuBar .myMenuBarRight { display: none; }
+  #myMenuBar .myMenuBarMobile { display: block; }
+}
