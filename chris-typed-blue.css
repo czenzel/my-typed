@@ -42,5 +42,6 @@ article p { text-align: justify; }
 }
 
 /* Container Backgrounds */
-div.container { background: rgb(244, 244, 255) !important; }
+div.container { background: rgba(244, 244, 255, 0.84) !important; }
+
 body { background-image: url(notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
