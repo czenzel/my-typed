@@ -12,7 +12,7 @@ header { margin-top: 15px; border-bottom: 1px dashed Navy; margin-bottom: 30px; 
 h1.site-title { text-shadow: 2px 2px rgba(134, 137, 185, 0.6); }
 .site-title a { color: Navy !important; }
 
-.site-nav { background: rgba(176, 187, 239, 0.54); }
+.site-nav { background: rgba(176, 187, 239. 0.73); }
 .site-nav > ul { padding: 10px; }
 .site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; }
 
@@ -40,3 +40,8 @@ article p { text-align: justify; }
   #myMenuBar .myMenuBarRight { display: none; }
   #myMenuBar .myMenuBarMobile { display: block; }
 }
+
+/* Container Backgrounds */
+div.container { background: rgba(244, 244, 255, 0.84) !important; }
+
+body { background-image: url(notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
