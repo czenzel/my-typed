@@ -40,3 +40,7 @@ article p { text-align: justify; }
   #myMenuBar .myMenuBarRight { display: none; }
   #myMenuBar .myMenuBarMobile { display: block; }
 }
+
+/* Container Backgrounds */
+div.container { background: rgb(244, 244, 255) !important; }
+body { background: Black !important; }
