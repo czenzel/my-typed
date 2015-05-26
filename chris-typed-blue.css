@@ -43,6 +43,12 @@ footer { margin-bottom: 25px; }
   #myMenuBar .myMenuBarMobile { display: block; }
 }
 
+/*
+ Since we know we have loaded the CSS from the third-party
+ source. Now display the menu bar officially
+ */
+#myMenuBar { display: block; }
+
 /* Container Backgrounds */
 div.container { background: rgba(244, 244, 255, 0.84) !important; }
 
