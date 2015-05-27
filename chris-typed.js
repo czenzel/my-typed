@@ -14,7 +14,7 @@ $(document).ready(function () {
 /* Change Favorite Icon On-The-Fly */
 $(window).load(function () {
 
- $('head > link [rel="icon"]').remove();
+ $('link [rel="icon"]').remove();
  $('head').append('<link href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" rel="shortcut icon" type="image/png" />');
 
 });
