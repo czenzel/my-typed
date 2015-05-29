@@ -37,7 +37,7 @@ footer { margin-bottom: 25px; }
 #myMenuBar .myMenuBarRight { float: right; }
 #myMenuBar .myMenuBarMobile { display: none; }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 680px) {
   #myMenuBar .myMenuBarLeft { display: none; }
   #myMenuBar .myMenuBarRight { display: none; }
   #myMenuBar .myMenuBarMobile { display: block; }
