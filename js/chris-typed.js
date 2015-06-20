@@ -9,6 +9,10 @@ $(document).ready(function () {
   /* Add Styled Rule */
   $('h1.site-title').after("<p class='site-title-ruler-p'><img ondrag='return false;' oncontextmenu='return false;' src='//czenzel.github.io/typed/images/typed-styled-rule.png' border='0' class='site-title-ruler-img' /></p>");
 
+  /* Add Logo to Header - std:Template */
+  $("h1.site-title").attr('style', 'text-align: left; float: left');
+  $("h1.site-title").after("<div style='padding: 0; margin: 0; float: right;'><img src='https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg' ondrag='return false;' oncontextmenu='return false;' border='0' style='border-radius: 150px; width: 50px; height: auto;' /></div>");
+
   /* Protect Images */
   $('img').bind('contextmenu', function(e) { return false; });
   $('img').mousedown(function(){ return false; });
