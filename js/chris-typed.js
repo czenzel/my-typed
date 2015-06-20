@@ -11,6 +11,13 @@ $(document).ready(function () {
 
 });
 
+/* Add Style Elements */
+$(document).ready(function() {
+
+  $('h1.site-title').after('<p class='site-title-ruler-p'><img src='//czenzel.github.io/typed/images/typed-styled-rule.png' border='0' class='site-title-ruler-img' /></p>
+
+});
+
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
 $(window).load(function () {
 
