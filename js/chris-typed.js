@@ -6,6 +6,10 @@
 /* Protect Images */
 $(document).ready(function () {
 
+  /* Add Styled Rule */
+  $('h1.site-title').after("<p class='site-title-ruler-p'><img ondrag='return false;' oncontextmenu='return false;' src='//czenzel.github.io/typed/images/typed-styled-rule.png' border='0' class='site-title-ruler-img' /></p>");
+
+  /* Protect Images */
   $('img').bind('contextmenu', function(e) { return false; });
   $('img').mousedown(function(){ return false; });
 
