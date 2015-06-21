@@ -48,7 +48,19 @@ $(window).load(function () {
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
 function _typed_lightboxPost() {
 
-  // Add to post-content class images
-  $('.post-content img').attr('rel', 'lightbox');
+  // Look for all post images
+  $('.post-content img').each(function() {
+
+    // Get current image and hyperlink
+    var postImage = $(this);
+    var piSrc = postImage.attr('src');
+
+    // If the image is on Typed Images then add the lightbox
+    // You may add additional sources later, but should in a different function.
+    if (piSrc.indexOf("images.typed.com") > -1) {
+      postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
+    }
+
+  });
 
 }
