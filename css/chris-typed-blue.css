@@ -34,6 +34,8 @@ footer { margin-bottom: 25px; }
 
 .post-author { border-bottom: 0px !important; }
 
+h1.post-title { padding-bottom: 10px; border-bottom: 1.5px solid rgb(73, 67, 139); }
+
 /* Menu Bar Top */
 
 #myMenuBar { font-family: 'Open Sans', sans-serif; color: White; font-size: 11pt; position: absolute; top: 0px; margin: 0; padding: 10px; background: rgba(8, 30, 147, 0.75); width: 100%; height: 45px; }
