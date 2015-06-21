@@ -36,7 +36,7 @@ footer { margin-bottom: 25px; }
 
 h1.post-title { padding-bottom: 10px; border-bottom: 1.5px solid rgb(73, 67, 139); }
 
-img.post-title-icon { width: 75px; height: 75px; border-radius: 0 !important; float: right; }
+.post-title-icon { width: 75px; height: 75px; border-radius: 0 !important; float: right; }
 
 /* Menu Bar Top */
 
