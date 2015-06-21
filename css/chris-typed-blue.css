@@ -68,7 +68,15 @@ img.post-title-icon { width: 50px; height: 50px; border-radius: 0 !important; fl
  */
 #myMenuBar { display: block !important; }
 
-/* Container Backgrounds */
+/*
+ Lightbox Container Fixes
+ */
+div#lightbox a { border-bottom: 0 !important; }
+
+/*
+ Container Backgrounds
+ */
 div.container { background: rgba(244, 244, 255, 0.84) !important; }
 
 body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
+
