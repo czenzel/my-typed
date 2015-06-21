@@ -20,6 +20,9 @@ $(document).ready(function () {
   $('img').bind('contextmenu', function(e) { return false; });
   $('img').mousedown(function(){ return false; });
 
+  /* Image Lightbox */
+  _typed_lightboxPost();
+
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -41,3 +44,11 @@ $(window).load(function () {
   $('head').append('<link rel="apple-touch-icon" href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" />');
 
 });
+
+/* Add Lightbox to all rendered images in the post-content and page-content where necessary */
+function _typed_lightboxPost() {
+
+  // Add to post-content class images
+  $('.post-content img').attr('rel', 'lightbox');
+
+}
