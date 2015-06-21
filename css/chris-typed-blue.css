@@ -9,6 +9,10 @@
 
 @import url(//fonts.googleapis.com/css?family=Gochi+Hand);
 
+/* Import Lightbox */
+
+@import url(lightbox.css);
+
 /* Modify Site Articles, Headers, and Blog Elements */
 
 article { font-family: 'Open Sans', sans-serif; font-size: 12pt; }
