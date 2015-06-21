@@ -25,16 +25,19 @@ $(document).ready(function () {
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
 $(window).load(function () {
 
- // Remove Shortcut Icon and Apple Touch Icon
- $('link').filter('[rel="icon"]').remove();
- $('link').filter('[rel="apple-touch-icon"]').remove();
+  // Add Lightbox for Photographs in Post Content
+  $('body').append('<script src="//czenzel.github.io/typed/js/lightbox.min.js"></script>');
 
- // Change Shortcut Icon and Apple Touch Icon to Profile Picture
+  // Remove Shortcut Icon and Apple Touch Icon
+  $('link').filter('[rel="icon"]').remove();
+  $('link').filter('[rel="apple-touch-icon"]').remove();
 
- // Favorite Icon
- $('head').append('<link href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" rel="shortcut icon" type="image/png" />');
+  // Change Shortcut Icon and Apple Touch Icon to Profile Picture
 
- // Apple Touch Icon
- $('head').append('<link rel="apple-touch-icon" href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" />');
+  // Favorite Icon
+  $('head').append('<link href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" rel="shortcut icon" type="image/png" />');
+
+  // Apple Touch Icon
+  $('head').append('<link rel="apple-touch-icon" href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" />');
 
 });
