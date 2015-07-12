@@ -17,7 +17,7 @@
 
 article { font-family: 'Open Sans', sans-serif; font-size: 12pt; }
 
-header { margin-top: 15px; margin-bottom: 30px; padding-bottom: 8px; }
+header { margin-top: -10px; margin-bottom: 30px; padding-bottom: 8px; }
 
 h1.site-title { font-family: 'Gochi Hand', cursive; text-shadow: 2px 2px rgba(134, 137, 185, 0.6); font-size: 40px !important; }
 .site-title a { color: Navy !important; }
