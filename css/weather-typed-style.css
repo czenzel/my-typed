@@ -84,4 +84,12 @@ div#lightbox a { border-bottom: 0 !important; }
  */
 div.container { background: rgba(244, 244, 255, 0.84) !important; max-width: 1024px !important; }
 
+/*
+ Minimum Height
+ */
+.main { min-height: 550px !important; }
+
+/*
+ Body Container
+ */
 body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
