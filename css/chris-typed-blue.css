@@ -82,7 +82,7 @@ div#lightbox a { border-bottom: 0 !important; }
 /*
  Container Backgrounds
  */
-div.container { background: rgba(244, 244, 255, 0.84) !important; max-width: 900px !important; }
+div.container { background: rgba(244, 244, 255, 0.84) !important; max-width: 1000px !important; }
 
 body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
 
