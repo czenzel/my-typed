@@ -16,6 +16,7 @@
 /* Modify Site Articles, Headers, and Blog Elements */
 
 article { font-family: 'Open Sans', sans-serif; font-size: 12pt; }
+article p { line-height: 10px; }
 
 header { margin-top: -10px; margin-bottom: 30px; padding-bottom: 8px; }
 
