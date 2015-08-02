@@ -7,14 +7,14 @@
 $(document).ready(function () {
 
   /* Add Styled Rule */
-  var _czt_styledRule = 1;
+  var _czt_styledRule = 0;
 
   if (_czt_styledRule > 0) {
     $('h1.site-title').after("<p class='site-title-ruler-p'><img ondrag='return false;' oncontextmenu='return false;' src='//czenzel.github.io/typed/images/typed-styled-rule.png' border='0' class='site-title-ruler-img' /></p>");
   }
 
   /* Add Logo to Header - std:Template */
-  var _czt_authorIcon = 1;
+  var _czt_authorIcon = 0;
 
   if (_czt_authorIcon > 0) {
     $("h1.site-title").attr('style', 'text-align: left; float: left');
