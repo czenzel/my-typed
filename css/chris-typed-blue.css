@@ -40,7 +40,7 @@ a.read-more:after { content: " \00BB"; }
 article img { border-radius: 20px; }
 
 article h1, h2, h3, h4 { text-shadow: 2px 2px rgba(0, 0, 0, 0.3); }
-article p { text-align: justify; }
+article p { text-align: justify; line-height: 200%; }
 
 footer { margin-bottom: 25px; }
 
