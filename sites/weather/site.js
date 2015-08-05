@@ -31,7 +31,6 @@ function nwr_radio_outages(targetElement) {
 		url: jq_proxy_link + '/' + nwr_outages_link,
 		type: 'GET',
 		success: function(data) {
-			data = data.contents;
 			data = nwr_filter_data(data);
 			var outage_table = $(data).find(".status").first();
 			outage_table.find("tr").each(function(index) {
