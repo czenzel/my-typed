@@ -104,5 +104,5 @@ div.container { max-width: 1000px !important; }
  Comments Section
  */
 div.blog-comments { border-top: 1px solid #ededed; padding-top: 48px; }
-div.blog-comments img.blog-comments-icon { width: 75px; height: auto !important; }
+div.blog-comments img.blog-comments-icon { width: 60px; height: auto !important; }
 div.blog-comments h2 { font-size: 20pt; }
