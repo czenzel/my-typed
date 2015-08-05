@@ -100,3 +100,9 @@ div.container { max-width: 1000px !important; }
 
 /* body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; } */
 
+/*
+ Comments Section
+ */
+div.blog-comments { border-top: 1px solid #ededed; padding-top: 48px; }
+div.blog-comments img.blog-comments-icon { width: 75px; height: auto !important; }
+div.blog-comments h2 { font-size: 20pt; }
