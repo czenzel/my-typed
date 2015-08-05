@@ -16,8 +16,8 @@ function nwr_radio_outages(targetElement) {
 	 * teamWeather Proxy Note - This proxy only works on teamWeather domains. Use
 	 * any-origin from GH project on your own server to prevent load issues.
 	 */
-	var nwr_outages_link = encodeURIComponent('http://www.nws.noaa.gov/nwr/outages/outages.php');
-	var jq_proxy_link = 'http://whateverorigin.org/get';
+	var nwr_outages_link = 'http://www.nws.noaa.gov/nwr/outages/outages.php';
+	var jq_proxy_link = 'https://cors-anywhere.herokuapp.com';
 
 	/*
 	 * Enable CORS
@@ -28,7 +28,7 @@ function nwr_radio_outages(targetElement) {
 	 * Create a request
 	 */
 	$.ajax({
-		url: jq_proxy_link + '?url=' + nwr_outages_link,
+		url: jq_proxy_link + '/' + nwr_outages_link,
 		type: 'GET',
 		success: function(data) {
 			data = data.contents;
