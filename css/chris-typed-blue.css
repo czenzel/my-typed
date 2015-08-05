@@ -49,7 +49,7 @@ footer { margin-bottom: 25px; }
 
 .post-author { border-bottom: 0px !important; }
 
-h1.post-title { padding-bottom: 10px; border-bottom: 1.5px solid rgb(73, 67, 139); }
+h1.post-title { padding-bottom: 12px; border-bottom: 1px solid #ededed; }
 
 img.post-title-icon { width: 50px; height: 50px; border-radius: 0 !important; float: right; padding: 6px; }
 
