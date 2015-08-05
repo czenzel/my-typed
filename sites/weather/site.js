@@ -56,7 +56,6 @@ function nwr_radio_outages(targetElement) {
 
 function nwr_filter_data(data){
 	data = data.replace(/src\=[\"|\'][^>]*[\"|\']/ig, '');
-	data = data.replace(/<?\/body[^>]*>/ig,'');
 	data = data.replace(/[\r|\n]+/ig,'');
 	data = data.replace(/<--[\S\s]*?-->/ig,'');
 	data = data.replace(/<noscript[^>]*>[\S\s]*?<\/noscript>/ig,'');
