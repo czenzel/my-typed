@@ -28,7 +28,7 @@ img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
 /*
  Site Navigation Backgrounds and Color Changes
  */
-.site-nav { padding: 8px; padding-top: 3px; background: rgba(141, 175, 232, 0.65) !important; }
+.site-nav { padding: 8px; padding-top: 0; background: rgba(141, 175, 232, 0.65) !important; }
 .site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; }
 
 .site-tagline { font-family: 'Gochi Hand', cursive; color: Navy; font-style: normal !important; text-shadow: 2px 2px rgba(5, 46, 255, 0.16); font-size: 15pt; }
