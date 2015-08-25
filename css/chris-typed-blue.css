@@ -91,7 +91,7 @@ div#lightbox a { border-bottom: 0 !important; }
 /*
  Container Backgrounds
  */
-div.container { background: rgba(239, 238, 246, 1) !important; }
+div.container { background: rgba(255, 255, 255, 0.86) !important; }
 body { background: Black; }
 
 /*
@@ -107,3 +107,8 @@ body { background-image: url(../images/notebook.jpg) !important; background-repe
 div.blog-comments { border-top: 1px solid #ededed; padding-top: 48px; }
 div.blog-comments img.blog-comments-icon { width: 60px; height: auto !important; }
 div.blog-comments h2 { font-size: 20pt; }
+
+/*
+ Padding Fixes
+ */
+body { padding-left: 25px; padding-right: 25px; }
