@@ -28,9 +28,14 @@ img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
 /*
  Site Navigation Backgrounds and Color Changes
  */
-.site-nav { background: rgba(141, 175, 232, 0.65) !important; box-shadow: 3px 3px rgba(125, 156, 206, 0.65); }
-.site-nav > ul { padding: 8px; padding-top: 4px; }
+.site-nav { padding: 5px; padding-top: 0; background: rgba(141, 175, 232, 0.65) !important; }
+.site-nav > ul { padding: 0; margin: 0; padding-top: 6px; padding-bottom: 3px; }
 .site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; }
+
+/*
+ Site Header
+ */
+header { margin-bottom: -25px; }
 
 .site-tagline { font-family: 'Gochi Hand', cursive; color: Navy; font-style: normal !important; text-shadow: 2px 2px rgba(5, 46, 255, 0.16); font-size: 15pt; }
 
@@ -86,13 +91,13 @@ div#lightbox a { border-bottom: 0 !important; }
 /*
  Container Backgrounds
  */
-div.container { background: rgba(239, 238, 246, 1) !important; }
+div.container { background: rgba(255, 255, 255, 0.86) !important; }
 body { background: Black; }
 
 /*
  Container Widths
  */
-div.container { max-width: 1100px !important; width: auto !important; }
+div.container { padding: 25px; padding-left: 30px; padding-right: 30px; max-width: 1040px !important; width: auto !important; }
 
 body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
 
@@ -102,3 +107,8 @@ body { background-image: url(../images/notebook.jpg) !important; background-repe
 div.blog-comments { border-top: 1px solid #ededed; padding-top: 48px; }
 div.blog-comments img.blog-comments-icon { width: 60px; height: auto !important; }
 div.blog-comments h2 { font-size: 20pt; }
+
+/*
+ Padding Fixes
+ */
+body { padding-left: 25px; padding-right: 25px; }
