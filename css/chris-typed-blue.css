@@ -28,11 +28,9 @@ img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
 /*
  Site Navigation Backgrounds and Color Changes
  */
-/*
 .site-nav { background: rgba(141, 175, 232, 0.65) !important; box-shadow: 3px 3px rgba(125, 156, 206, 0.65); }
-.site-nav > ul { padding: 8px; }
+.site-nav > ul { padding: 8px; padding-top: 4px; }
 .site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; }
-*/
 
 .site-tagline { font-family: 'Gochi Hand', cursive; color: Navy; font-style: normal !important; text-shadow: 2px 2px rgba(5, 46, 255, 0.16); font-size: 15pt; }
 
@@ -88,17 +86,15 @@ div#lightbox a { border-bottom: 0 !important; }
 /*
  Container Backgrounds
  */
- /*
 div.container { background: rgba(239, 238, 246, 1) !important; }
 body { background: Black; }
-*/
 
 /*
  Container Widths
  */
-div.container { max-width: 1000px !important; }
+div.container { max-width: 1100px !important; width: auto !important; }
 
-/* body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; } */
+body { background-image: url(../images/notebook.jpg) !important; background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
 
 /*
  Comments Section
