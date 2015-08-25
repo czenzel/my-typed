@@ -30,6 +30,7 @@ img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
  */
 .site-nav { padding: 5px; padding-top: 0; background: rgba(141, 175, 232, 0.65) !important; border-radius: 10px; }
 .site-nav > ul { padding: 0; margin: 0; padding-top: 6px; padding-bottom: 3px; }
+.site-nav > li { margin: 0 4px; }
 .site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; padding: 5px; padding-left: 12px; padding-right: 12px; }
 .site-nav > ul > li > a:hover { border-radius: 10px; background: rgba(255, 255, 255, 0.7); }
 
