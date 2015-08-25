@@ -6,7 +6,7 @@
 /* Import Fonts */
 
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300);
-
+@import url(//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Gochi+Hand);
 
 /* Import Lightbox */
@@ -15,7 +15,7 @@
 
 /* Modify Site Articles, Headers, and Blog Elements */
 
-article { font-family: 'Open Sans', sans-serif; font-size: 12pt; }
+article { font-family: 'Merriweather', serif; font-size: 12pt; }
 
 header { margin-top: -10px; margin-bottom: 30px; padding-bottom: 8px; }
 
