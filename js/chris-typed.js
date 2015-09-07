@@ -108,7 +108,7 @@ function _effect_typeWriter(myTypingElement) {
 	var isTag;
 	var text;
 
-	myContent.html('');
+	$(myTypingElement).html('');
 
 	(function type() {
 
