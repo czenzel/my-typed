@@ -104,7 +104,7 @@ function _typed_lightboxPost() {
 function _effect_typeWriter(myTypingElement) {
 
 	var myContent = $(myTypingElement).html();
-	myContent = '<typewriter>' + myContent + '</typewriter>';
+	myContent = '<span>' + myContent + '</span>';
 
 	$(myTypingElement).html('<span><span class="blink">_</span></span>');
 
