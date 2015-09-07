@@ -48,13 +48,13 @@ $(document).ready(function () {
 		$('h1.post-title').each(function(index) {
 			var myElementClass = 'post-title-' + index;
 			$(this).addClass(myElementClass);
-			if ($(myElementClass) _effect_typeWriter('.' + myElementClass);
+			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);
 		});
 
 		$('h1.page-title').each(function(index) {
 			var myElementClass = 'post-title-' + index;
 			$(this).addClass(myElementClass);
-			if ($(myElementClass) _effect_typeWriter('.' + myElementClass);
+			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);
 		});
 	}
 
