@@ -106,7 +106,7 @@ function _effect_typeWriter(myTypingElement) {
 	var myContent = $(myTypingElement).html();
 	myContent = '<typewriter>' + myContent + '</typewriter>';
 
-	$(myTypingElement).html('<typewriter>&nbsp;</typewriter>');
+	$(myTypingElement).html('<typewriter><blink>_</blink></typewriter>');
 
 	var i = 0;
 	var isTag;
@@ -117,7 +117,7 @@ function _effect_typeWriter(myTypingElement) {
 		text = myContent.slice(0, ++i);
 		if (text === myContent) return;
 
-		$(myTypingElement).html(text);
+		$(myTypingElement).html(text + '<blink>_</blink>');
 
 		var char = text.slice(-1);
 		if (char === '<') isTag = true;
@@ -129,3 +129,5 @@ function _effect_typeWriter(myTypingElement) {
 	}());
 
 }
+
+
