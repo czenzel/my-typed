@@ -22,7 +22,7 @@ $(document).ready(function () {
   }
 
   /* Add Post Image Icons to Post Articles in Blog */
-  var _czt_postIcon = 0;
+  var _czt_postIcon = 1;
 
   if (_czt_postIcon > 0) {
     $('h1.post-title').before('<img src="//czenzel.github.io/typed/images/post.png" border="0" class="post-title-icon" />');
