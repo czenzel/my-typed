@@ -37,7 +37,7 @@ img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
 /*
  Site Header
  */
-header { margin-bottom: -25px; margin-left: 0px; width: 100%; }
+header { margin-bottom: -25px !important; margin-left: 0px !important; width: 100% !important; }
 
 .site-tagline { font-family: 'Gochi Hand', cursive; color: Navy; font-style: normal !important; text-shadow: 2px 2px rgba(5, 46, 255, 0.16); font-size: 15pt; }
 
@@ -95,8 +95,8 @@ div#lightbox a { border-bottom: 0 !important; }
  */
 div.container { background: rgba(255, 255, 255, 0.86) !important; }
 body { background: Black; }
-#content.container { padding-top: 45px; width: 100%; padding-left: 0px; padding-right: 0px; }
-div.main.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2 { margin-left: 0px; width: 100%; padding: 90px; padding-top: 20px; }
+#content.container { padding-top: 45px !important; width: 100% !important; padding-left: 0px !important; padding-right: 0px !important; }
+div.main.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2 { margin-left: 0px !important; width: 100% !important; padding: 90px !important; padding-top: 20px !important; }
 
 /*
  Container Widths
