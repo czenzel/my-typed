@@ -137,9 +137,9 @@ article h1.page-title, article h1.post-title {
     opacity:0.7;
     overflow: hidden;
     border-right: 3px solid black;
-    -webkit-animation: typing 1200ms steps(26, end), 
+    -webkit-animation: typing 1200ms steps(1024, end), 
                         blink-caret 500ms step-end 1s;
-    -moz-animation: typing 1200ms steps(26, end), 
+    -moz-animation: typing 1200ms steps(1024, end), 
                         blink-caret 500ms step-end 1s;
 }
 
@@ -147,9 +147,9 @@ article h1.page-title, article h1.post-title {
 	opacity:0.7;
     overflow: hidden;
     border-right: 3px solid black;
-    -webkit-animation: typing 1200ms steps(26, end), 
+    -webkit-animation: typing 1200ms steps(2048, end), 
                         blink-caret 500ms step-end 1s;
-    -moz-animation: typing 1200ms steps(26, end), 
+    -moz-animation: typing 1200ms steps(2048, end), 
                         blink-caret 500ms step-end 1s;
 }
 
