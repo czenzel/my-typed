@@ -104,7 +104,9 @@ function _typed_lightboxPost() {
 function _effect_typeWriter(myTypingElement) {
 
 	var myContent = $(myTypingElement).html();
-	var i = -1;
+	myContent = '<typewriter>' + myContent + '</typewriter>';
+
+	var i = 0;
 	var isTag;
 	var text;
 
