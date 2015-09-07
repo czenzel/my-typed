@@ -31,15 +31,25 @@ img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
  Site Navigation Backgrounds and Color Changes
  */
 .site-nav { padding: 5px; padding-top: 0; background: rgba(141, 175, 232, 0.65) !important; border-radius: 10px; }
+<<<<<<< HEAD
+.site-nav > ul { padding: 0; margin: 0; padding-top: 6px; padding-bottom: 3px; }
+.site-nav > ul > li > a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; padding: 5px; padding-left: 12px; padding-right: 12px; }
+.site-nav > ul > li > a:hover { border-radius: 10px; background: rgba(255, 255, 255, 0.7); }
+=======
 .site-nav ul { padding: 0; margin: 0; padding-top: 6px; padding-bottom: 3px; }
 .site-nav li { margin: 0 4px !important; }
 .site-nav ul li a { text-shadow: 2px 2px rgba(185, 189, 255, 0.6); color: Navy; padding: 5px; padding-left: 12px; padding-right: 12px; }
 .site-nav ul li a:hover { border-radius: 10px; background: rgba(255, 255, 255, 0.7); }
+>>>>>>> gh-pages
 
 /*
  Site Header
  */
+<<<<<<< HEAD
+header { margin-bottom: -25px; }
+=======
 header { margin-bottom: -25px !important; margin-left: 0px !important; width: 100% !important; }
+>>>>>>> gh-pages
 
 .site-tagline { font-family: 'Gochi Hand', cursive; color: Navy; font-style: normal !important; text-shadow: 2px 2px rgba(5, 46, 255, 0.16); font-size: 15pt; }
 
@@ -97,8 +107,11 @@ div#lightbox a { border-bottom: 0 !important; }
  */
 div.container { background: rgba(255, 255, 255, 0.86) !important; }
 body { background: Black; }
+<<<<<<< HEAD
+=======
 #content.container { padding-top: 45px !important; width: 100% !important; padding-left: 0px !important; padding-right: 0px !important; }
 div.main.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2 { margin-left: 0px !important; width: 100% !important; padding: 90px !important; padding-top: 20px !important; }
+>>>>>>> gh-pages
 
 /*
  Container Widths

@@ -28,6 +28,13 @@ $(document).ready(function () {
     $('h1.post-title').before('<img src="//czenzel.github.io/typed/images/post.png" border="0" class="post-title-icon" />');
   }
 
+  /* Replace blog header image */
+  var _czt_headerImage = 1;
+
+  if (_czt_headerImage > 0) {
+    $('header').html('<img src="//czenzel.github.io/typed/images/blog-header-2015.jpg" border="0" alt="Christopher Zenzel" style="width: 100%; height: auto;" />');
+  }
+
   /* Protect Images */
   $('img').bind('contextmenu', function(e) { return false; });
   $('img').mousedown(function(){ return false; });
