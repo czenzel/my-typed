@@ -42,6 +42,22 @@ $(document).ready(function () {
 	/* Image Lightbox */
 	_typed_lightboxPost();
 
+	/* jQuery Typing Effects */
+	var _czt_typingEffect = 1;
+	if (_czt_typingEffect > 0) {
+		$('h1.post-title').each(function(index) {
+			var myElementClass = 'post-title-' + index;
+			$(this).addClass(myElementClass);
+			if ($(myElementClass) _effect_typeWriter('.' + myElementClass);
+		});
+
+		$('h1.page-title').each(function(index) {
+			var myElementClass = 'post-title-' + index;
+			$(this).addClass(myElementClass);
+			if ($(myElementClass) _effect_typeWriter('.' + myElementClass);
+		});
+	}
+
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
