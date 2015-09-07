@@ -106,11 +106,11 @@ function _effect_typeWriter(myTypingElement) {
 	var myContent = $(myTypingElement).html();
 	myContent = '<typewriter>' + myContent + '</typewriter>';
 
+	$(myTypingElement).html('<typewriter></typewriter>');
+
 	var i = 0;
 	var isTag;
 	var text;
-
-	$(myTypingElement).html('');
 
 	(function type() {
 
@@ -124,7 +124,7 @@ function _effect_typeWriter(myTypingElement) {
 		if (char === '>') isTag = false;
 
 		if (isTag) return type();
-		setTimeout(type, 55);
+		setTimeout(type, 80);
 
 	}());
 
