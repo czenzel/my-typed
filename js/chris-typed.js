@@ -106,7 +106,7 @@ function _effect_typeWriter(myTypingElement) {
 	var myContent = $(myTypingElement).html();
 	myContent = '<typewriter>' + myContent + '</typewriter>';
 
-	$(myTypingElement).html('<typewriter></typewriter>');
+	$(myTypingElement).html('<typewriter>&nbsp;</typewriter>');
 
 	var i = 0;
 	var isTag;
