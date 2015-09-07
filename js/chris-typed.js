@@ -124,7 +124,7 @@ function _effect_typeWriter(myTypingElement) {
 		if (char === '>') isTag = false;
 
 		if (isTag) return type();
-		setTimeout(type, 80);
+		setTimeout(type, 55);
 
 	}());
 
