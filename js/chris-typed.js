@@ -14,11 +14,11 @@ $(document).ready(function () {
   }
 
   /* Add Logo to Header - std:Template */
-  var _czt_authorIcon = 0;
+  var _czt_authorIcon = 1;
 
   if (_czt_authorIcon > 0) {
     $("h1.site-title").attr('style', 'text-align: left; float: left');
-    $("h1.site-title").after('<div style="padding: 0; margin: 0; float: right;"><img src="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" ondrag="return false;" oncontextmenu="return false;" border="0" style="border-radius: 150px; width: 50px; height: auto;" /></div>');
+    $("h1.site-title").after('<div style="padding: 0; margin: 0; float: left;"><img src="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" ondrag="return false;" oncontextmenu="return false;" border="0" style="border-radius: 150px; width: 50px; height: auto;" /></div>');
   }
 
   /* Add Post Image Icons to Post Articles in Blog */
