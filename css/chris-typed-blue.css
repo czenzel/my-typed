@@ -135,8 +135,6 @@ body { padding-left: 25px; padding-right: 25px; }
  */
 article h1.page-title, article h1.post-title {
 	opacity:0.7;
-	white-space:nowrap;
-    overflow:hidden;
     border-right: 3px solid black;
     -webkit-animation: typing 1200ms steps(26, end), 
                         blink-caret 500ms step-end 1s;
@@ -146,8 +144,6 @@ article h1.page-title, article h1.post-title {
 
 .typing-content {
 	opacity:0.7;
-	white-space:nowrap;
-    overflow:hidden;
     border-right: 3px solid black;
     -webkit-animation: typing 1200ms steps(26, end), 
                         blink-caret 500ms step-end 1s;
