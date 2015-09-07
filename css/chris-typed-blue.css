@@ -17,10 +17,12 @@
 
 article { font-family: 'Merriweather', serif; font-size: 12pt; }
 
-header { margin-top: -30px; margin-bottom: 30px; padding-bottom: 8px; }
+header { margin-top: -40px; margin-bottom: 30px; padding-bottom: 8px; }
 
-h1.site-title { font-family: 'Gochi Hand', cursive; text-shadow: 2px 2px rgba(134, 137, 185, 0.6); font-size: 40px !important; }
+h1.site-title { text-align: right; font-family: 'Gochi Hand', cursive; text-shadow: 2px 2px rgba(134, 137, 185, 0.6); font-size: 40px !important; }
 .site-title a { color: Navy !important; }
+
+div.site-tagline { text-align: right; }
 
 p.site-title-ruler-p { padding-bottom: 0; margin-bottom: 0; text-align: center; }
 img.site-title-ruler-img { border: 0; width: 100%; height: auto; }
