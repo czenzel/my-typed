@@ -32,7 +32,7 @@ $(document).ready(function () {
   var _czt_headerImage = 1;
 
   if (_czt_headerImage > 0) {
-    $('header').html('<img src="//czenzel.github.io/typed/images/blog-header-2015.jpg" border="0" alt="Christopher Zenzel" style="width: 100%; height: auto;" />');
+    $('.site-title').before('<img src="//czenzel.github.io/typed/images/blog-header-2015.jpg" border="0" alt="Christopher Zenzel" style="width: 100%; height: auto;" />');
   }
 
   /* Protect Images */
