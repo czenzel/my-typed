@@ -130,9 +130,3 @@ body { padding-left: 25px; padding-right: 25px; }
 .site-tagline { display: none !important; }
 .site-header-image { width: 100% !important; height: auto !important; border: 0 !important; border-radius: 10px !important; }
 
-/*
- Type writer
- */
-.typewriter:after { border-right: 3px solid black; padding-right: 5px; animation: blink 500ms steps(5, start infinite; -webkit-animation: blink 500ms steps(5, start) infinite; }
-@keyframes blink { to { visibility: hidden; } }
-@-webkit-keyframes blink { to { visibility: hidden; } }

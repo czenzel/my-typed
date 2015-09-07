@@ -100,11 +100,21 @@ function _typed_lightboxPost() {
 
 }
 
+/* Blinking cursor effect */
+function _effect_typeBlink(myBlinkElement) {
+	setInterval(function() {
+		$(myBlinkElement).fadeIn(300);
+		$(myBlinkElement).fadeOut(500);
+	}, 1000);
+}
+
 /* Add typewriter script - http://jsfiddle.net/creed88/VG8MJ/1/ */
 function _effect_typeWriter(myTypingElement) {
 
-	var myContent = $(myTypingElement).html();
-	myContent = '<span class="typewriter">' + myContent + '</span>';
+	var myContent = $(myTypingElement)[0].outerHTML;
+	myContent = myContent
+
+	$(myTypingElement).html('_');
 
 	var i = 0;
 	var isTag;
@@ -115,14 +125,14 @@ function _effect_typeWriter(myTypingElement) {
 		text = myContent.slice(0, ++i);
 		if (text === myContent) return;
 
-		$(myTypingElement).html(text);
+		$(myTypingElement).replaceWith(text + '_');
 
 		var char = text.slice(-1);
 		if (char === '<') isTag = true;
 		if (char === '>') isTag = false;
 
 		if (isTag) return type();
-		setTimeout(type, 80);
+		setTimeout(type, 55);
 
 	}());
 
