@@ -6,8 +6,9 @@
 /* Import Fonts */
 
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300);
-@import url(//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
+//@import url(//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Gochi+Hand);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
 
 /* Import Lightbox */
 
@@ -15,7 +16,7 @@
 
 /* Modify Site Articles, Headers, and Blog Elements */
 
-article { font-family: 'Merriweather', serif; font-size: 12pt; }
+article { font-family: 'Roboto', serif; font-size: 12pt; }
 
 header { margin-top: -40px; margin-bottom: 30px; padding-bottom: 8px; }
 
@@ -58,7 +59,7 @@ footer { margin-bottom: 25px; }
 
 h1.post-title { padding-bottom: 12px; border-bottom: 1px solid #ededed; }
 
-img.post-title-icon { width: 50px; height: 50px; border-radius: 0 !important; float: right; padding: 6px; }
+img.post-title-icon { width: 50px; height: 50px; border-radius: 0 !important; float: right; padding: 10px; padding-left: 12px; }
 
 /* Handwriting for post and page content */
 /*
