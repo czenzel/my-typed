@@ -52,7 +52,7 @@ $(document).ready(function () {
 		});
 
 		$('h1.page-title').each(function(index) {
-			var myElementClass = 'post-title-' + index;
+			var myElementClass = 'page-title-' + index;
 			$(this).addClass(myElementClass);
 			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);
 		});
@@ -104,7 +104,7 @@ function _typed_lightboxPost() {
 function _effect_typeWriter(myTypingElement) {
 
 	var myContent = $(myTypingElement).html();
-	var i = 0;
+	var i = -1;
 	var isTag;
 	var text;
 
