@@ -129,3 +129,46 @@ body { padding-left: 25px; padding-right: 25px; }
 .site-title { display: none !important; }
 .site-tagline { display: none !important; }
 .site-header-image { width: 100% !important; height: auto !important; border: 0 !important; border-radius: 10px !important; }
+
+/*
+ Typing content for HTML 5
+ */
+article h1.page-title, article h1.post-title {
+    opacity:0.7;
+    overflow: hidden;
+    border-right: 3px solid black;
+    -webkit-animation: typing 1200ms steps(26, end), 
+                        blink-caret 500ms step-end 1s;
+    -moz-animation: typing 1200ms steps(26, end), 
+                        blink-caret 500ms step-end 1s;
+}
+
+.typing-content {
+	opacity:0.7;
+    overflow: hidden;
+    border-right: 3px solid black;
+    -webkit-animation: typing 1200ms steps(26, end), 
+                        blink-caret 500ms step-end 1s;
+    -moz-animation: typing 1200ms steps(26, end), 
+                        blink-caret 500ms step-end 1s;
+}
+
+@-webkit-keyframes typing {
+    from { width: 0; }
+    to { width:400px; }
+}
+
+@-moz-keyframes typing {
+    from { width: 0; }
+    to { width:400px; }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+
