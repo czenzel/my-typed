@@ -14,7 +14,7 @@ $(document).ready(function () {
   }
 
   /* Add Logo to Header - std:Template */
-  var _czt_authorIcon = 1;
+  var _czt_authorIcon = 0;
 
   if (_czt_authorIcon > 0) {
     $("h1.site-title").attr('style', 'text-align: left; float: left');
