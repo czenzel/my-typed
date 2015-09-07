@@ -104,9 +104,7 @@ function _typed_lightboxPost() {
 function _effect_typeWriter(myTypingElement) {
 
 	var myContent = $(myTypingElement).html();
-	myContent = '<span>' + myContent + '</span>';
-
-	$(myTypingElement).html('<span><span class="blink">_</span></span>');
+	myContent = '<span class="typewriter">' + myContent + '</span>';
 
 	var i = 0;
 	var isTag;
@@ -117,7 +115,7 @@ function _effect_typeWriter(myTypingElement) {
 		text = myContent.slice(0, ++i);
 		if (text === myContent) return;
 
-		$(myTypingElement).html(text + '<span class="blink">_</span>');
+		$(myTypingElement).html(text);
 
 		var char = text.slice(-1);
 		if (char === '<') isTag = true;

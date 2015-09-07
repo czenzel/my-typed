@@ -133,11 +133,6 @@ body { padding-left: 25px; padding-right: 25px; }
 /*
  Type writer
  */
-.blink, blink {
-	-webkit-animation: blink 1s step-end infinite;
-	animation: blink 1s step-end infinite;
-}
-
-@-webkit-keyframes blink { 50% { visibility: hidden; }}
-	@keyframes blink { 50% { visibility: hidden; }}
-
+.typewriter:after { border-right: 3px solid black; padding-right: 5px; animation: blink 500ms steps(5, start infinite; -webkit-animation: blink 500ms steps(5, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
+@-webkit-keyframes blink { to { visibility: hidden; } }
