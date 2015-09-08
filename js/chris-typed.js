@@ -125,7 +125,7 @@ function _effect_typeWriter(myTypingElement) {
 		text = myContent.slice(0, ++i);
 		if (text === myContent) return;
 
-		$(myTypingElement).replaceWith(text + '_');
+		$(myTypingElement).html(text + '_');
 
 		var char = text.slice(-1);
 		if (char === '<') isTag = true;
