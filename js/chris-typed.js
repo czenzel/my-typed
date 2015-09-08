@@ -56,6 +56,12 @@ $(document).ready(function () {
 			$(this).addClass(myElementClass);
 			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);
 		});
+
+		$('.content-typewriter').each(function(index) {
+			var myElementClass = 'typewriter-' + index;
+			$(this).addClass(myElementClass);
+			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);
+		});
 	}
 
 });
@@ -85,6 +91,21 @@ function _typed_lightboxPost() {
 
 	// Look for all post images
 	$('.post-content img').each(function() {
+
+		// Get current image and hyperlink
+		var postImage = $(this);
+		var piSrc = postImage.attr('src');
+
+		// If the image is on Typed Images then add the lightbox
+		// You may add additional sources later, but should in a different function.
+		if (piSrc.indexOf("images.typed.com") > -1) {
+			postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
+		}
+
+	});
+
+	// Look for all page images
+	$('.page-content img').each(function() {
 
 		// Get current image and hyperlink
 		var postImage = $(this);
