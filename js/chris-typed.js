@@ -74,6 +74,12 @@ $(document).ready(function () {
 		_cms_markdown();
 	}
 
+	/* Tabs */
+	var _czt_tabRegions = 1;
+	if (_czt_tabRegions > 0) {
+		_cms_tabs();
+	}
+
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -83,7 +89,7 @@ $(window).load(function () {
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
 
 	// Append jQuery UI
-	$('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js"></script>');
+	$('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js" id="jui-script"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -190,4 +196,15 @@ function _cms_markdown() {
 	}, 100);
 }
 
-
+/* Tabs */
+function _cms_tabs() {
+	// Load jQuery UI Tabs
+	var jqut = setTimeout(function() {
+		if ($('#jui-script')) {
+			$('jui-script').ready(function() {
+\				$('.content-tabs').tabs();
+				clearInterval(jqut);
+			});
+		}
+	}, 100);
+}
