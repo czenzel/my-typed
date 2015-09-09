@@ -201,7 +201,7 @@ function _cms_tabs() {
 	// Load jQuery UI Tabs
 	var jqut = setTimeout(function() {
 		if ($('#jui-script')) {
-			$('jui-script').ready(function() {
+			$('#jui-script').ready(function() {
 				$('.content-tabs').tabs();
 				clearInterval(jqut);
 			});
