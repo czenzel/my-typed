@@ -11,10 +11,6 @@
 
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,700italic);
 
-/* Import Lightbox */
-
-@import url(lightbox.css);
-
 /* Modify Site Articles, Headers, and Blog Elements */
 
 body, article, footer, header, p { font-family: 'Source Sans Pro', sans-serif; font-size: 14pt; }
@@ -130,3 +126,8 @@ body { padding-left: 25px; padding-right: 25px; }
 .site-tagline { display: none !important; }
 .site-header-image { width: 100% !important; height: auto !important; border: 0 !important; border-radius: 10px !important; }
 
+/*
+ User Modules
+ */
+@import url(../js/jquery-ui/jquery-ui.min.css);
+@import url(lightbox.css);
