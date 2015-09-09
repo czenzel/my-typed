@@ -72,11 +72,9 @@ $(document).ready(function () {
 	var _czt_markdownRegions = 1;
 	if (_czt_markdownRegions > 0) {
 		$('[markdown="1"]').each(function(index) {
-			if (markdown) {
-				var myContents = $(this).html();
-				myContents = markdown.toHTML(myContents);
-				$(this).html(myContents);
-			}
+			var myContents = $(this).html();
+			myContents = markdown.toHTML(myContents);
+			$(this).html(myContents);
 		});
 	}
 
