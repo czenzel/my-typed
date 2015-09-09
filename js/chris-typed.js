@@ -233,16 +233,16 @@ function _cms_markdown() {
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
 
 	// Load markdown elements
-	var markdownTimer = setTimeout(function() {
-		if (typeof markdown != 'undefined') {
-			$('body').on('load', '[markdown="1"]', function(e) {
+	$('[markdown="1"]').each(function (index) {
+		var markdownTimer = setTimeout(function() {
+			if (typeof markdown != 'undefined') {
 				var myContents = $(this).html();
 				myContents = markdown.toHTML(myContents);
 				$(this).html(myContents);
-			});
-			clearInterval(markdownTimer);
-		}
-	}, 100);
+				clearInterval(markdownTimer);
+			}
+		}, 150);
+	});
 }
 
 /* Tabs */
