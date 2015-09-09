@@ -39,6 +39,16 @@ $(document).ready(function () {
 	$('img').bind('contextmenu', function(e) { return false; });
 	$('img').mousedown(function(){ return false; });
 
+	/* Dynamic Elements */
+	$('body').on('contextmenu', 'img', function(e) {
+		e.preventDefault();
+		return false;
+	});
+	$('body').on('dragstart', 'img', function(e) {
+		e.preventDefault();
+		return false;
+	});
+
 	/* Image Lightbox */
 	_typed_lightboxPost();
 
@@ -66,6 +76,13 @@ $(document).ready(function () {
 			$(this).addClass(myElementClass);
 			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);
 		});
+
+		/* Dynamic Elements */
+		$('body').on('load', '.content-typewriter', function(e) {
+			var myElementClass = 'typewriter-' + index;
+			$(this).addClass(myElementClass);
+			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);			
+		});
 	}
 
 	/* Inner Typed Markdown Regions */
@@ -75,7 +92,7 @@ $(document).ready(function () {
 	}
 
 	/* Tabs */
-	var _czt_tabRegions = 1;
+	var _czt_tabRegions = 0;
 	if (_czt_tabRegions > 0) {
 		_cms_tabs();
 	}
