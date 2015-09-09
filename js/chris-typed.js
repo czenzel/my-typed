@@ -71,12 +71,7 @@ $(document).ready(function () {
 	/* Inner Typed Markdown Regions */
 	var _czt_markdownRegions = 1;
 	if (_czt_markdownRegions > 0) {
-		// Analysis for Markdown Elements
-		$('[markdown="1"]').each(function(index) {
-			var myContents = $(this).html();
-			myContents = markdown.toHTML(myContents);
-			$(this).html(myContents);
-		});
+		_typed_scriptActions('markdown');
 	}
 
 });
@@ -106,6 +101,17 @@ $(window).load(function () {
 	$('head').append('<link rel="apple-touch-icon" href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" />');
 
 });
+
+/* Script loading actions */
+function _typed_scriptActions(actionType) {
+	if (actionType == 'markdown') {
+		$('script[id="markdown"]').load(function() {
+			$(document).ready(function() {
+				_cms_markdown();
+			});
+		});
+	}
+}
 
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
 function _typed_lightboxPost() {
@@ -176,6 +182,16 @@ function _effect_typeWriter(myTypingElement) {
 
 	}());
 
+}
+
+/* Markdown Regions */
+function _cms_markdown() {
+	// Analysis for Markdown Elements
+	$('[markdown="1"]').each(function(index) {
+		var myContents = $(this).html();
+		myContents = markdown.toHTML(myContents);
+		$(this).html(myContents);
+	});
 }
 
 
