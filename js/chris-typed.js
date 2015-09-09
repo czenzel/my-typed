@@ -173,10 +173,10 @@ function _effect_typeWriter(myTypingElement) {
 /* Markdown Regions */
 function _cms_markdown() {
 	// Append Markdown Scripts
-	var myMarkdownScript = '<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js">$(document).ready(function() { _cms_markdown_load(); });</script>';
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js"></script>');
 
-	// Add final script
-	$('body').append(myMarkdownScript);
+	// Load additional end of page script
+	$('body').append('<script>$(document).ready(function() { _cms_markdown_load(); });</script>');
 }
 
 function _cms_markdown_load() {
