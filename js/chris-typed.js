@@ -105,8 +105,11 @@ $(window).load(function () {
 	// Add Lightbox for Photographs in Post Content
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
 
+	// Append Markdown Scripts
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
+
 	// Append jQuery UI
-	$('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js" id="jui-script"></script>');
+	// $('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js" id="jui-script"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -195,9 +198,6 @@ function _effect_typeWriter(myTypingElement) {
 
 /* Markdown Regions */
 function _cms_markdown() {
-	// Append Markdown Scripts
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
-
 	// Load markdown elements
 	$('div[markdown="1"]').each(function() {
 		var markdownTimer = setTimeout(function() {
