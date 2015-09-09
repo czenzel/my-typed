@@ -68,6 +68,18 @@ $(document).ready(function () {
 		});
 	}
 
+	/* Inner Typed Markdown Regions */
+	var _czt_markdownRegions = 1;
+	if (_czt_markdownRegions > 0) {
+		$('[markdown="1"]').each(function(index) {
+			if (markdown) {
+				var myContents = $(this).html();
+				myContents = markdown.toHTML(myContents);
+				$(this).html(myContents);
+			}
+		});
+	}
+
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -75,6 +87,9 @@ $(window).load(function () {
 
 	// Add Lightbox for Photographs in Post Content
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox.min.js"></script>');
+
+	// Add Markdown Support Script
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown.js"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
