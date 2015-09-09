@@ -71,16 +71,13 @@ $(document).ready(function () {
 	/* Inner Typed Markdown Regions */
 	var _czt_markdownRegions = 1;
 	if (_czt_markdownRegions > 0) {
-		// Add Markdown Support Script
-		// This must be added to the default site due to load order.
-		// $('body').append('<script src="//czenzel.github.io/typed/js/markdown.min.js"></script>');
+		_cms_markdown();
+	}
 
-		// Analysis for Markdown Elements
-		$('[markdown="1"]').each(function(index) {
-			var myContents = $(this).html();
-			myContents = markdown.toHTML(myContents);
-			$(this).html(myContents);
-		});
+	/* Tabs */
+	var _czt_tabRegions = 1;
+	if (_czt_tabRegions > 0) {
+		_cms_tabs();
 	}
 
 });
@@ -89,7 +86,10 @@ $(document).ready(function () {
 $(window).load(function () {
 
 	// Add Lightbox for Photographs in Post Content
-	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox.min.js"></script>');
+	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
+
+	// Append jQuery UI
+	$('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js" id="jui-script"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -176,4 +176,37 @@ function _effect_typeWriter(myTypingElement) {
 
 }
 
+/* Markdown Regions */
+function _cms_markdown() {
+	// Append Markdown Scripts
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
 
+	// Load markdown elements
+	var markdownTimer = setTimeout(function() {
+		if ($('#markdown-script')) {
+			$('#markdown-script').ready(function() {
+				$('[markdown="1"]').each(function(index) {
+					var myContents = $(this).html();
+					myContents = markdown.toHTML(myContents);
+					$(this).html(myContents);
+				});
+				clearInterval(markdownTimer);
+			});
+		}
+	}, 100);
+}
+
+/* Tabs */
+function _cms_tabs() {
+	// Load jQuery UI Tabs
+	var jqut = setTimeout(function() {
+		if ($('#jui-script')) {
+			$('#jui-script').ready(function() {
+				$('[tabs="1"]').each(function(index) {
+					$(this).tabs();
+				});
+				clearInterval(jqut);
+			});
+		}
+	}, 100);
+}

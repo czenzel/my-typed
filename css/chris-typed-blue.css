@@ -11,9 +11,14 @@
 
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,700italic);
 
-/* Import Lightbox */
 
-@import url(lightbox.css);
+/*
+ User Modules
+ */
+
+@import url(//czenzel.github.io/typed/css/lightbox.css);
+
+@import url(//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.css);
 
 /* Modify Site Articles, Headers, and Blog Elements */
 
