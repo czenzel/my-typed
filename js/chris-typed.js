@@ -176,7 +176,7 @@ function _cms_markdown() {
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
 
 	// Load markdown elements
-	var markdownTimer = setTimeout(
+	var markdownTimer = setTimeout(function() {
 		if ($('#markdown-script')) {
 			$('[markdown="1"]').each(function(index) {
 				var myContents = $(this).html();
@@ -185,7 +185,7 @@ function _cms_markdown() {
 			});
 			clearInterval(markdownTimer);
 		}
-	), 100);
+	}, 100);
 }
 
 
