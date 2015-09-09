@@ -235,7 +235,7 @@ function _cms_markdown() {
 	// Load markdown elements
 	var markdownTimer = setTimeout(function() {
 		if (typeof markdown != 'undefined') {
-			$('[markdown="1"]').each(function(index) {
+			$('body').on('load', '[markdown="h1"]', function(e) {
 				var myContents = $(this).html();
 				myContents = markdown.toHTML(myContents);
 				$(this).html(myContents);
