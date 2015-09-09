@@ -177,14 +177,16 @@ function _cms_markdown() {
 
 	// Load markdown elements
 	var markdownTimer = setTimeout(function() {
-		if ($('#markdown-script')) {
-			$('[markdown="1"]').each(function(index) {
-				var myContents = $(this).html();
-				myContents = markdown.toHTML(myContents);
-				$(this).html(myContents);
-			});
-			clearInterval(markdownTimer);
-		}
+		$(function() {
+			if ($('#markdown-script')) {
+				$('[markdown="1"]').each(function(index) {
+					var myContents = $(this).html();
+					myContents = markdown.toHTML(myContents);
+					$(this).html(myContents);
+				});
+				clearInterval(markdownTimer);
+			}
+		});
 	}, 50);
 }
 
