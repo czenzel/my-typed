@@ -194,14 +194,16 @@ function _effect_typeWriter(myTypingElement) {
 function _cms_markdown() {
 	// Load markdown elements
 	var markdownTimer = setTimeout(function() {
-		if (typeof markdown != 'undefined') {
-			$('[markdown="1"]').each(function() {
-				var myContents = $(this).html();
-				myContents = markdown.toHTML(myContents);
-				$(this).html(myContents);
-			});
-			clearInterval(markdownTimer);
-		}
+		$(document).ready(function() {
+			if (typeof markdown != 'undefined') {
+				$('[markdown="1"]').each(function() {
+					var myContents = $(this).html();
+					myContents = markdown.toHTML(myContents);
+					$(this).html(myContents);
+				});
+				clearInterval(markdownTimer);
+			}
+		});
 	}, 100);
 }
 
