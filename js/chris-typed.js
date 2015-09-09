@@ -71,7 +71,7 @@ $(document).ready(function () {
 	/* Inner Typed Markdown Regions */
 	var _czt_markdownRegions = 1;
 	if (_czt_markdownRegions > 0) {
-		_typed_scriptActions('markdown');
+		_cms_markdown();
 	}
 
 });
@@ -81,9 +81,6 @@ $(window).load(function () {
 
 	// Add Lightbox for Photographs in Post Content
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
-
-	// Append Markdown
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="script-markdown"></script>');
 
 	// Append jQuery UI
 	$('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js"></script>');
@@ -101,17 +98,6 @@ $(window).load(function () {
 	$('head').append('<link rel="apple-touch-icon" href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" />');
 
 });
-
-/* Script loading actions */
-function _typed_scriptActions(actionType) {
-	if (actionType == 'markdown') {
-		$('script[id="script-markdown"]').load(function() {
-			$(document).ready(function() {
-				_cms_markdown();
-			});
-		});
-	}
-}
 
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
 function _typed_lightboxPost() {
@@ -186,7 +172,15 @@ function _effect_typeWriter(myTypingElement) {
 
 /* Markdown Regions */
 function _cms_markdown() {
-	// Analysis for Markdown Elements
+	// Append Markdown Scripts
+	var myMarkdownScript = '<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js">$(document).ready(function() { _cms_markdown_load(); });</script>';
+
+	// Add final script
+	$('body').append(myMarkdownScript);
+}
+
+function _cms_markdown_load() {
+	// Load markdown elements
 	$('[markdown="1"]').each(function(index) {
 		var myContents = $(this).html();
 		myContents = markdown.toHTML(myContents);
