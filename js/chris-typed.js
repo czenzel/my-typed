@@ -173,19 +173,19 @@ function _effect_typeWriter(myTypingElement) {
 /* Markdown Regions */
 function _cms_markdown() {
 	// Append Markdown Scripts
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js"></script>');
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
 
-	// Load additional end of page script
-	$('body').append('<script>$(document).ready(function() { _cms_markdown_load(); });</script>');
-}
-
-function _cms_markdown_load() {
 	// Load markdown elements
-	$('[markdown="1"]').each(function(index) {
-		var myContents = $(this).html();
-		myContents = markdown.toHTML(myContents);
-		$(this).html(myContents);
-	});
+	var markdownTimer = setTimeout(
+		if ($('#markdown-script')) {
+			$('[markdown="1"]').each(function(index) {
+				var myContents = $(this).html();
+				myContents = markdown.toHTML(myContents);
+				$(this).html(myContents);
+			});
+			clearInterval(markdownTimer);
+		}
+	), 100);
 }
 
 
