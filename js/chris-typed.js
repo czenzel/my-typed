@@ -234,15 +234,17 @@ function _cms_markdown() {
 
 	// Load markdown elements
 	var markdownTimer = setTimeout(function() {
-		if ($('#markdown-script')) {
-			$('#markdown-script').ready(function() {
-				$('[markdown="1"]').each(function(index) {
-					var myContents = $(this).html();
-					myContents = markdown.toHTML(myContents);
-					$(this).html(myContents);
+		if (typeof markdown != 'undefined') {
+			if ($('#markdown-script')) {
+				$('#markdown-script').ready(function() {
+					$('[markdown="1"]').each(function(index) {
+						var myContents = $(this).html();
+						myContents = markdown.toHTML(myContents);
+						$(this).html(myContents);
+					});
+					clearInterval(markdownTimer);
 				});
-				clearInterval(markdownTimer);
-			});
+			}
 		}
 	}, 100);
 }
