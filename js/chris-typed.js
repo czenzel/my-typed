@@ -200,6 +200,7 @@ function _cms_markdown() {
 					myContents = markdown.toHTML(myContents);
 					$(this).html(myContents);
 				});
+				$(document).unbind('DOMSubtreeModified');
 				clearInterval(markdownTimer);
 			}
 		}, 100);
