@@ -192,7 +192,7 @@ function _effect_typeWriter(myTypingElement) {
 
 /* Markdown Regions */
 function _cms_markdown() {
-	$(document).bind('DOMSubtreeModified', function() {
+	$(document).ready(function() {
 		var markdownTimer = setTimeout(function() {
 			if (typeof markdown != 'undefined') {
 				$('[markdown="1"]').each(function() {
@@ -200,7 +200,6 @@ function _cms_markdown() {
 					myContents = markdown.toHTML(myContents);
 					$(this).html(myContents);
 				});
-				$(document).unbind('DOMSubtreeModified');
 				clearInterval(markdownTimer);
 			}
 		}, 100);
