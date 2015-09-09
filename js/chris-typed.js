@@ -4,7 +4,7 @@
  */
 
 /* Protect Images */
-$(document).load(function () {
+$(document).ready(function () {
 
 	/* Add Styled Rule */
 	var _czt_styledRule = 0;
