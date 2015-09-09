@@ -192,18 +192,17 @@ function _effect_typeWriter(myTypingElement) {
 
 /* Markdown Regions */
 function _cms_markdown() {
-	// Load markdown elements
-	var markdownTimer = setTimeout(function() {
-		$(document).ready(function() {
+	$(document).ready(function() {
+		var markdownTimer = setTimeout(function() {
 			if (typeof markdown != 'undefined') {
-				$('[markdown="1"]').each(function() {
+				$('body').on('load', '[markdown="1"]', function() {
 					var myContents = $(this).html();
 					myContents = markdown.toHTML(myContents);
 					$(this).html(myContents);
-				});
+				}
 				clearInterval(markdownTimer);
 			}
-		});
-	}, 100);
+		}, 100);
+	});
 }
 
