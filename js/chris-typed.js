@@ -83,7 +83,7 @@ $(window).load(function () {
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
 
 	// Append Markdown
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js"></script>');
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="script-markdown"></script>');
 
 	// Append jQuery UI
 	$('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js"></script>');
@@ -105,7 +105,7 @@ $(window).load(function () {
 /* Script loading actions */
 function _typed_scriptActions(actionType) {
 	if (actionType == 'markdown') {
-		$('script[id="markdown"]').load(function() {
+		$('script[id="script-markdown"]').load(function() {
 			$(document).ready(function() {
 				_cms_markdown();
 			});
