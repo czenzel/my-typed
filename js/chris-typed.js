@@ -233,7 +233,7 @@ function _cms_markdown() {
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
 
 	// Load markdown elements
-	$('[markdown="1"]').each(function (index) {
+	$('[markdown="1"]').each(function() {
 		var markdownTimer = setTimeout(function() {
 			if (typeof markdown != 'undefined') {
 				var myContents = $(this).html();
