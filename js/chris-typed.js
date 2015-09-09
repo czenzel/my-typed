@@ -125,23 +125,6 @@ $(window).load(function () {
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
 function _typed_lightboxPost() {
 
-	// Load Dynamiclly
-	$('body').on('load', '.post-content', function(e) {
-		$(this).find('img').each(function() {
-
-			// Get current image and hyperlink
-			var postImage = $(this);
-			var piSrc = postImage.attr('src');
-
-			// If the image is on Typed Images then add the lightbox
-			// You may add additional sources later, but should in a different function.
-			if (piSrc.indexOf("images.typed.com") > -1) {
-				postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
-			}
-
-		});
-	});
-
 	// Look for all post images
 	$('.post-content img').each(function() {
 
@@ -155,23 +138,6 @@ function _typed_lightboxPost() {
 			postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
 		}
 
-	});
-
-	// Load Dynamiclly
-	$('body').on('load', '.page-content', function(e) {
-		$(this).find('img').each(function() {
-
-			// Get current image and hyperlink
-			var postImage = $(this);
-			var piSrc = postImage.attr('src');
-
-			// If the image is on Typed Images then add the lightbox
-			// You may add additional sources later, but should in a different function.
-			if (piSrc.indexOf("images.typed.com") > -1) {
-				postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
-			}
-
-		});
 	});
 
 	// Look for all page images
