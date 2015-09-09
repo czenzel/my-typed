@@ -192,7 +192,7 @@ function _effect_typeWriter(myTypingElement) {
 
 /* Markdown Regions */
 function _cms_markdown() {
-	$(document).ready(function() {
+	$(document).bind('DOMSubtreeModified', function() {
 		var markdownTimer = setTimeout(function() {
 			if (typeof markdown != 'undefined') {
 				$('[markdown="1"]').each(function() {
