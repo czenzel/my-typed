@@ -71,6 +71,11 @@ $(document).ready(function () {
 	/* Inner Typed Markdown Regions */
 	var _czt_markdownRegions = 1;
 	if (_czt_markdownRegions > 0) {
+		// Add Markdown Support Script
+		// This must be added to the default site due to load order.
+		// $('body').append('<script src="//czenzel.github.io/typed/js/markdown.min.js"></script>');
+
+		// Analysis for Markdown Elements
 		$('[markdown="1"]').each(function(index) {
 			var myContents = $(this).html();
 			myContents = markdown.toHTML(myContents);
@@ -85,9 +90,6 @@ $(window).load(function () {
 
 	// Add Lightbox for Photographs in Post Content
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox.min.js"></script>');
-
-	// Add Markdown Support Script
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown.min.js"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
