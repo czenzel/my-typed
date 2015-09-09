@@ -202,7 +202,9 @@ function _cms_tabs() {
 	var jqut = setTimeout(function() {
 		if ($('#jui-script')) {
 			$('#jui-script').ready(function() {
-				$('.content-tabs').tabs();
+				$('[tabs="1"]').each(function(index) {
+					$(this).tabs();
+				});
 				clearInterval(jqut);
 			});
 		}
