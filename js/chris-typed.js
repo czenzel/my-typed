@@ -199,7 +199,7 @@ function _cms_markdown() {
 					var myContents = $(this).html();
 					myContents = markdown.toHTML(myContents);
 					$(this).html(myContents);
-				}
+				});
 				clearInterval(markdownTimer);
 			}
 		}, 100);
