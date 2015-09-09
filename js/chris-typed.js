@@ -91,12 +91,6 @@ $(document).ready(function () {
 		_cms_markdown();
 	}
 
-	/* Tabs */
-	var _czt_tabRegions = 0;
-	if (_czt_tabRegions > 0) {
-		_cms_tabs();
-	}
-
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -130,24 +124,25 @@ function _typed_lightboxPost() {
 
 	// Look for all post images
 	$('.post-content img').each(function() {
-
-		// Get current image and hyperlink
-		var postImage = $(this);
-		var piSrc = postImage.attr('src');
-
-		// If the image is on Typed Images then add the lightbox
-		// You may add additional sources later, but should in a different function.
-		if (piSrc.indexOf("images.typed.com") > -1) {
-			postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
-		}
-
+		_post_content_lightbox($(this));
 	});
 
 	// Look for all page images
 	$('.page-content img').each(function() {
+		_post_content_lightbox($(this));
+	});
 
+	// On Events
+	$('body').on('load', '.post-content img', function() {
+		_post_content_lightbox($(this));
+	});
+	$('body').on('load', '.page-content img', function() {
+		_post_content_lightbox($(this));
+	});
+
+	function _post_content_lightbox(myElement) {
 		// Get current image and hyperlink
-		var postImage = $(this);
+		var postImage = myElement;
 		var piSrc = postImage.attr('src');
 
 		// If the image is on Typed Images then add the lightbox
@@ -155,8 +150,7 @@ function _typed_lightboxPost() {
 		if (piSrc.indexOf("images.typed.com") > -1) {
 			postImage.wrap('<a href="' + piSrc + '" rel="lightbox"></a>');
 		}
-
-	});
+	}
 
 }
 
@@ -199,29 +193,15 @@ function _effect_typeWriter(myTypingElement) {
 /* Markdown Regions */
 function _cms_markdown() {
 	// Load markdown elements
-	$('div[markdown="1"]').each(function() {
-		var markdownTimer = setTimeout(function() {
-			if (typeof markdown != 'undefined') {
+	var markdownTimer = setTimeout(function() {
+		if (typeof markdown != 'undefined') {
+			$('[markdown="1"]').each(function() {
 				var myContents = $(this).html();
 				myContents = markdown.toHTML(myContents);
 				$(this).html(myContents);
-				clearInterval(markdownTimer);
-			}
-		}, 150);
-	});
-}
-
-/* Tabs */
-function _cms_tabs() {
-	// Load jQuery UI Tabs
-	var jqut = setTimeout(function() {
-		if ($('#jui-script')) {
-			$('#jui-script').ready(function() {
-				$('[tabs="1"]').each(function(index) {
-					$(this).tabs();
-				});
-				clearInterval(jqut);
 			});
+			clearInterval(markdownTimer);
 		}
 	}, 100);
 }
+
