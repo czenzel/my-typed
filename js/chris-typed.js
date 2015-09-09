@@ -195,7 +195,7 @@ function _cms_markdown() {
 	$(document).ready(function() {
 		var markdownTimer = setTimeout(function() {
 			if (typeof markdown != 'undefined') {
-				$('body').on('load', '[markdown="1"]', function() {
+				$('[markdown="1"]').each(function() {
 					var myContents = $(this).html();
 					myContents = markdown.toHTML(myContents);
 					$(this).html(myContents);
@@ -205,4 +205,3 @@ function _cms_markdown() {
 		}, 100);
 	});
 }
-
