@@ -129,5 +129,6 @@ body { padding-left: 25px; padding-right: 25px; }
 /*
  User Modules
  */
-@import url(../js/jquery-ui/jquery-ui.min.css);
-@import url(lightbox.css);
+@import url(//czenzel.github.io/typed/css/lightbox.css);
+@import url(//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.css);
+

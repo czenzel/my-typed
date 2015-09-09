@@ -185,7 +185,7 @@ function _cms_markdown() {
 			});
 			clearInterval(markdownTimer);
 		}
-	}, 100);
+	}, 50);
 }
 
 
