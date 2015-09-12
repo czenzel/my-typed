@@ -84,12 +84,6 @@ $(document).ready(function () {
 			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);			
 		});
 	}
-
-	var _czt_markdownEffect = 1;
-	if (_czt_markdownEffect > 0) {
-		_typed_markdownRender();
-	}
-
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -99,7 +93,7 @@ $(window).load(function () {
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
 
 	// Append Markdown Scripts
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
+	$('body').append('<script async src="//czenzel.github.io/typed/js/markdown/markdown.min.js">_typed_markdownRender();</script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -118,11 +112,9 @@ $(window).load(function () {
 /* Add markdown to all rendering markdown client side */
 function _typed_markdownRender() {
 	$('div[markdown="1"]').each(function() {
-		if (typeof markdown) {
-			var myContent = $(this).text();
-			myContent = markdown.toHTML(myContent);
-			$(this).html(myContent);
-		}
+		var myContent = $(this).text();
+		myContent = markdown.toHTML(myContent);
+		$(this).html(myContent);
 	});
 }
 
