@@ -51,13 +51,11 @@ $(document).ready(function () {
 
 	/* Dynamic Script Loading */
 	$(document).on('readystatechange', function() {
-		if ($(this).attr('src').indexOf("markdown.min.js") > -1) {
-			$('div[markdown="1"]').each(function() {
-				var myContent = $(this).text();
-				myContent = markdown.toHTML(myContent);
-				$(this).html(myContent);
-			});
-		}
+		$('div[markdown="1"]').each(function() {
+			var myContent = $(this).text();
+			myContent = markdown.toHTML(myContent);
+			$(this).html(myContent);
+		});
 	});
 
 	/* Image Lightbox */
