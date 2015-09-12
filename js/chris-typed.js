@@ -85,6 +85,11 @@ $(document).ready(function () {
 		});
 	}
 
+	var _czt_markdownEffect = 1;
+	if (_czt_markdownEffect > 0) {
+		_typed_markdownRender();
+	}
+
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -109,6 +114,17 @@ $(window).load(function () {
 	$('head').append('<link rel="apple-touch-icon" href="https://images.typed.com/56fb7eb9-f972-4af4-8aab-9339391e6a85/1610917_965113540187846_2159509180776299155_n.jpg" />');
 
 });
+
+/* Add markdown to all rendering markdown client side */
+function _typed_markdownRender() {
+	$('markdown').each(function() {
+		if (!(typeof markdown == "undefined")) {
+			var myContent = $(this).text();
+			myContent = markdown.toHTML(myContent);
+			$(this).html(myContent);
+		}
+	});
+}
 
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
 function _typed_lightboxPost() {
