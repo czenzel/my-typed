@@ -118,14 +118,11 @@ $(window).load(function () {
 /* Add markdown to all rendering markdown client side */
 function _typed_markdownRender() {
 	$('div[markdown="1"]').each(function() {
-		var markdownTimer = setInterval(function() {
-			if (!(typeof markdown == "undefined")) {
-				var myContent = $(this).text();
-				myContent = markdown.toHTML(myContent);
-				$(this).html(myContent);
-				clearInterval(markdownTimer);
-			}
-		}, 150);
+		if (typeof markdown) {
+			var myContent = $(this).text();
+			myContent = markdown.toHTML(myContent);
+			$(this).html(myContent);
+		}
 	});
 }
 
