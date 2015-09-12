@@ -124,7 +124,7 @@ function _typed_lightboxPost() {
 	// });
 
 	// On Events
-	$('article').on('load', 'img', function() {
+	$('body').on('load', 'img', function() {
 		_post_content_lightbox($(this));
 	});
 
