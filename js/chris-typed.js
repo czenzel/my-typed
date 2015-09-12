@@ -117,7 +117,7 @@ $(window).load(function () {
 
 /* Add markdown to all rendering markdown client side */
 function _typed_markdownRender() {
-	$('markdown').each(function() {
+	$('div[markdown="1"]').each(function() {
 		if (!(typeof markdown == "undefined")) {
 			var myContent = $(this).text();
 			myContent = markdown.toHTML(myContent);
