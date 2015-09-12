@@ -118,7 +118,7 @@ function _typed_markdownRender() {
 	// Append Markdown Scripts
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="mdScript"></script>');
 
-	$('#mdScript').ready(function() {
+	$('#mdScript').on('readystatechange', function() {
 		$('div[markdown="1"]').each(function() {
 			var myContent = $(this).text();
 			myContent = markdown.toHTML(myContent);
