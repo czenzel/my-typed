@@ -49,6 +49,17 @@ $(document).ready(function () {
 		return false;
 	});
 
+	/* Dynamic Script Loading */
+	$(document).on('readystatechange', function() {
+		if ($(this).attr('src').indexOf("markdown.min.js") > -1) {
+			$('div[markdown="1"]').each(function() {
+				var myContent = $(this).text();
+				myContent = markdown.toHTML(myContent);
+				$(this).html(myContent);
+			});
+		}
+	});
+
 	/* Image Lightbox */
 	_typed_lightboxPost();
 
@@ -117,14 +128,6 @@ function _typed_markdownRender() {
 
 	// Append Markdown Scripts
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="mdScript"></script>');
-
-	$('#mdScript').on('readystatechange', function() {
-		$('div[markdown="1"]').each(function() {
-			var myContent = $(this).text();
-			myContent = markdown.toHTML(myContent);
-			$(this).html(myContent);
-		});
-	});
 }
 
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
