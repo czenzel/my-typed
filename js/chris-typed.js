@@ -93,7 +93,8 @@ $(window).load(function () {
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
 
 	// Append Markdown Scripts
-	$('body').append('<script async src="//czenzel.github.io/typed/js/markdown/markdown.min.js">_typed_markdownRender();</script>');
+	$('body').append('<script async src="//czenzel.github.io/typed/js/markdown/markdown.min.js"></script>');
+	$('body').append('<script async>_typed_markdownRender();</script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
