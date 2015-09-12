@@ -124,10 +124,8 @@ function _typed_lightboxPost() {
 	// });
 
 	// On Events
-	$('body').on('load', 'img', function() {
-		if ($(this).hasClass('post-content') || $(this).hasClass('page-content')) {
-			_post_content_lightbox($(this));
-		}
+	$('article').on('load', 'img', function() {
+		_post_content_lightbox($(this));
 	});
 
 	function _post_content_lightbox(myElement) {
