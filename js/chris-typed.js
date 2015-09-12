@@ -85,12 +85,6 @@ $(document).ready(function () {
 		});
 	}
 
-	/* Inner Typed Markdown Regions */
-	var _czt_markdownRegions = 1;
-	if (_czt_markdownRegions > 0) {
-		_cms_markdown();
-	}
-
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -101,9 +95,6 @@ $(window).load(function () {
 
 	// Append Markdown Scripts
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
-
-	// Append jQuery UI
-	// $('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js" id="jui-script"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -123,21 +114,20 @@ $(window).load(function () {
 function _typed_lightboxPost() {
 
 	// Look for all post images
-	$('.post-content img').each(function() {
-		_post_content_lightbox($(this));
-	});
+	// $('.post-content img').each(function() {
+	// 	_post_content_lightbox($(this));
+	// });
 
 	// Look for all page images
-	$('.page-content img').each(function() {
-		_post_content_lightbox($(this));
-	});
+	// $('.page-content img').each(function() {
+	// 	_post_content_lightbox($(this));
+	// });
 
 	// On Events
-	$('body').on('load', '.post-content img', function() {
-		_post_content_lightbox($(this));
-	});
-	$('body').on('load', '.page-content img', function() {
-		_post_content_lightbox($(this));
+	$('body').on('load', 'img', function() {
+		if ($(this).hasClass('post-content') || $(this).hasClass('page-content')) {
+			_post_content_lightbox($(this));
+		}
 	});
 
 	function _post_content_lightbox(myElement) {
@@ -190,18 +180,3 @@ function _effect_typeWriter(myTypingElement) {
 
 }
 
-/* Markdown Regions */
-function _cms_markdown() {
-	$(document).ready(function() {
-		var markdownTimer = setTimeout(function() {
-			if (typeof markdown != 'undefined') {
-				$('[markdown="1"]').each(function() {
-					var myContents = $(this).html();
-					myContents = markdown.toHTML(myContents);
-					$(this).html(myContents);
-				});
-				clearInterval(markdownTimer);
-			}
-		}, 100);
-	});
-}
