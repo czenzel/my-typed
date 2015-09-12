@@ -84,6 +84,12 @@ $(document).ready(function () {
 			if ($(myElementClass)) _effect_typeWriter('.' + myElementClass);			
 		});
 	}
+
+	/* Markdown Rendering on Client Side */
+	var _czt_markdownRender = 1;
+	if (_czt_markdownRender > 0) {
+		_typed_markdownRender();
+	}
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
