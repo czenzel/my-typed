@@ -85,10 +85,9 @@ $(document).ready(function () {
 		});
 	}
 
-	/* Inner Typed Markdown Regions */
-	var _czt_markdownRegions = 1;
-	if (_czt_markdownRegions > 0) {
-		_cms_markdown();
+	var _czt_markdownEffect = 1;
+	if (_czt_markdownEffect > 0) {
+		_typed_markdownRender();
 	}
 
 });
@@ -101,9 +100,6 @@ $(window).load(function () {
 
 	// Append Markdown Scripts
 	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
-
-	// Append jQuery UI
-	// $('body').append('<script src="//czenzel.github.io/typed/js/jquery-ui/jquery-ui.min.js" id="jui-script"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -119,6 +115,17 @@ $(window).load(function () {
 
 });
 
+/* Add markdown to all rendering markdown client side */
+function _typed_markdownRender() {
+	$('div[markdown="1"]').each(function() {
+		if (!(typeof markdown == "undefined")) {
+			var myContent = $(this).text();
+			myContent = markdown.toHTML(myContent);
+			$(this).html(myContent);
+		}
+	});
+}
+
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
 function _typed_lightboxPost() {
 
@@ -129,14 +136,6 @@ function _typed_lightboxPost() {
 
 	// Look for all page images
 	$('.page-content img').each(function() {
-		_post_content_lightbox($(this));
-	});
-
-	// On Events
-	$('body').on('load', '.post-content img', function() {
-		_post_content_lightbox($(this));
-	});
-	$('body').on('load', '.page-content img', function() {
 		_post_content_lightbox($(this));
 	});
 
@@ -190,18 +189,3 @@ function _effect_typeWriter(myTypingElement) {
 
 }
 
-/* Markdown Regions */
-function _cms_markdown() {
-	$(document).ready(function() {
-		var markdownTimer = setTimeout(function() {
-			if (typeof markdown != 'undefined') {
-				$('[markdown="1"]').each(function() {
-					var myContents = $(this).html();
-					myContents = markdown.toHTML(myContents);
-					$(this).html(myContents);
-				});
-				clearInterval(markdownTimer);
-			}
-		}, 100);
-	});
-}
