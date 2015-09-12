@@ -114,20 +114,12 @@ $(window).load(function () {
 function _typed_lightboxPost() {
 
 	// Look for all post images
-	// $('.post-content img').each(function() {
-	// 	_post_content_lightbox($(this));
-	// });
-
-	// Look for all page images
-	// $('.page-content img').each(function() {
-	// 	_post_content_lightbox($(this));
-	// });
-
-	// On Events
-	$('.post-content img').one('load', function() {
+	$('.post-content img').each(function() {
 		_post_content_lightbox($(this));
 	});
-	$('.page-content img').one('load', function() {
+
+	// Look for all page images
+	$('.page-content img').each(function() {
 		_post_content_lightbox($(this));
 	});
 
