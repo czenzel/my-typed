@@ -49,6 +49,15 @@ $(document).ready(function () {
 		return false;
 	});
 
+	/* Dynamic Script Loading */
+	$(document).on('readystatechange', function() {
+		$('div[markdown="1"]').each(function() {
+			var myContent = $(this).text();
+			myContent = markdown.toHTML(myContent);
+			$(this).html(myContent);
+		});
+	});
+
 	/* Image Lightbox */
 	_typed_lightboxPost();
 
@@ -85,11 +94,11 @@ $(document).ready(function () {
 		});
 	}
 
-	var _czt_markdownEffect = 1;
-	if (_czt_markdownEffect > 0) {
+	/* Markdown Rendering on Client Side */
+	var _czt_markdownRender = 1;
+	if (_czt_markdownRender > 0) {
 		_typed_markdownRender();
 	}
-
 });
 
 /* Change Favorite Icon and Apple Touch Icon On-The-Fly */
@@ -97,9 +106,6 @@ $(window).load(function () {
 
 	// Add Lightbox for Photographs in Post Content
 	$('body').append('<script src="//czenzel.github.io/typed/js/lightbox/lightbox.min.js"></script>');
-
-	// Append Markdown Scripts
-	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="markdown-script"></script>');
 
 	// Remove Shortcut Icon and Apple Touch Icon
 	$('link').filter('[rel="icon"]').remove();
@@ -117,16 +123,9 @@ $(window).load(function () {
 
 /* Add markdown to all rendering markdown client side */
 function _typed_markdownRender() {
-	$('div[markdown="1"]').each(function() {
-		var markdownTimer = setInterval(function() {
-			if (!(typeof markdown == "undefined")) {
-				var myContent = $(this).text();
-				myContent = markdown.toHTML(myContent);
-				$(this).html(myContent);
-				clearInterval(markdownTimer);
-			}
-		}, 150);
-	});
+
+	// Append Markdown Scripts
+	$('body').append('<script src="//czenzel.github.io/typed/js/markdown/markdown.min.js" id="mdScript"></script>');
 }
 
 /* Add Lightbox to all rendered images in the post-content and page-content where necessary */
