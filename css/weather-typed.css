@@ -1,0 +1,79 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
+@import url(//czenzel.github.io/typed/css/lightbox.css);
+body {
+font-family: 'Source Sans Pro', sans-serif;
+background: rgb(28, 107, 174);
+}
+p {
+font-size: 14pt;
+}
+a {
+color: Navy;
+border-bottom: 1px dashed;
+}
+a:hover {
+color: Red;
+}
+.site-title a {
+text-shadow: 2px 2px rgba(58, 64, 201, 0.44);
+color: rgb(3, 21, 150);
+}
+.site-tagline {
+color: rgb(3, 21, 150);
+}
+.site-nav {
+margin-top: 24px;
+}
+.site-nav ul li a {
+color: rgb(3, 21, 150);
+}
+.container {
+max-width: 1280px !important;
+}
+.container:nth-child(2) {
+background: rgba(255, 255, 255, 0.78);
+margin-top: 45px;
+}
+.container:nth-child(4) {
+background: rgb(22, 14, 123);
+margin-bottom: 45px;
+}
+.container:nth-child(3) {
+padding-top: 55px;
+background: rgb(255, 255, 255);
+}
+footer {
+padding-top: 40px;
+padding-bottom: 40px;
+color: White;
+}
+footer p {
+font-size: 12pt;
+}
+footer a {
+color: White;
+border-bottom: 1px dashed;
+}
+footer a:hover {
+color: LightGrey;
+}
+.post-title {
+font-size: 35pt;
+}
+.post-meta {
+margin-top: 18px;
+}
+.post-content, .post-excerpt {
+padding-top: 15px;
+padding-bottom: 15px;
+}
+.post-content p, .post-excerpt p {
+line-height: 200%;
+}
+.post-content blockquote {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.post-author {
+border-bottom: 1px solid #ededed !important;
+}
