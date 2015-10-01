@@ -2,6 +2,16 @@ $(document).ready(function() {
 	/* Prevent Default Image Actions */
 	$('img').bind('contextmenu', function(e) { return false; });
 	$('img').mousedown(function(){ return false; });
+	
+	/* Dynamic Elements */
+	$('body').on('contextmenu', 'img', function(e) {
+		e.preventDefault();
+		return false;
+	});
+	$('body').on('dragstart', 'img', function(e) {
+		e.preventDefault();
+		return false;
+	});
 
 	/* Script Loading */
 	$(document).on('readystatechange', function() {
